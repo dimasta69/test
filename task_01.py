@@ -12,8 +12,8 @@ def is_palindrome(data):
 
     for i in range(len(line)):
         if line[i] != line[-1 - i]:
-            return print(False)
-    return print(True)
+            return False
+    return True
 
 #примеры
 is_palindrome("A man, a plan, a canal -- Panama") # => True

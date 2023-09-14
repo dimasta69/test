@@ -7,13 +7,13 @@ def coincidence(list = None, range = None):
     incoming_numbers = [] # создадим пустой список, который будет хранить в себе все вошедшиче в диапозон числа
 
     if list is None or range is None: # при выполении этого условия выводиться пустой массив
-        return print(incoming_numbers)
+        return incoming_numbers
 
     for i in list: # цикл, с помощью которого мы перемещаемся по элементам массива
         if isinstance(i, (int, float)): # это условия выполняется, если элемент массива имеет тип int or float
             if i >= min(range) and i < max(range) + 1:
                 incoming_numbers.append(i)
-    return print(incoming_numbers)
+    return incoming_numbers
 
 #Пример
 coincidence([1, 2, 3, 4, 5], range(3, 6)) # => [3, 4, 5]

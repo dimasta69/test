@@ -14,7 +14,7 @@ def combine_anagrams(words_array):
         else:
             anagram_groups[sorted_word] = [word]
 
-    return print(list(anagram_groups.values()))
+    return list(anagram_groups.values())
 
 # Проверка
 combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream"])

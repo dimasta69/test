@@ -4,7 +4,7 @@
 # Далее, игнорируя все второстепенные знаки (препинаия, пробелы и т.д) произволиться перемножение.
 def  multiply_numbers(inputs = None):
     if inputs is None:
-        return print("None")
+        return "None"
     string = str(inputs) # входящие данные переводим в тип данных строка
 
     numbers = []
@@ -15,13 +15,13 @@ def  multiply_numbers(inputs = None):
     numbers_clear = numbers == []
 
     if numbers_clear:
-        return print("None")
+        return "None"
 
     multiplay = 1 # необходимая нам переменная, для сохранения полученных вычислений
     for number in numbers:
         multiplay *= number
 
-    return print(multiplay)
+    return multiplay
 
 # Проверка
 multiply_numbers() # => None

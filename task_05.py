@@ -7,14 +7,14 @@ from datetime import datetime, timedelta
 def date_in_future(char = None):
     date_now = datetime.now() # текущая дата
     if char is None:
-        return print(date_now.strftime("%Y-%m-%d %H:%M"))
+        return date_now.strftime("%Y-%m-%d %H:%M")
 
     number_or_not = isinstance(char, int)  # является ли вводимый символ числом
     if number_or_not:
         future_date = date_now + timedelta(days=char)
-        return print(future_date.strftime("%Y-%m-%d %H:%M"))
+        return future_date.strftime("%Y-%m-%d %H:%M")
 
-    print(date_now.strftime("%Y-%m-%d %H:%M"))
+    return date_now.strftime("%Y-%m-%d %H:%M")
 
 
 #Проверка

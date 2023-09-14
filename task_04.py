@@ -7,7 +7,7 @@ def sort_list(list = []):
     list_copy = list
 
     if list == []:
-        return print([])
+        return []
 
     max_number = max(list_copy) # находим максимальное значение
     min_number = min(list_copy) # находим минимальное значение
@@ -19,7 +19,7 @@ def sort_list(list = []):
             list_copy[i] = max_number
 
     list_copy.append(min_number) # добавляем в конец списка минимальное значение
-    return print(list_copy)
+    return list_copy
 
 # Примеры
 sort_list([]) # => []
