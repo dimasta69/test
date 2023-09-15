@@ -13,7 +13,7 @@ def max_odd(list):
                  odd_numbers.append(i) # добавляем в массив нечетные числа
 
     if len(odd_numbers) == 0:
-        return "None" # если массив пустой выводим None
+        return None # если массив пустой выводим None
 
     return int(max(odd_numbers))
 

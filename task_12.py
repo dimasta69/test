@@ -3,20 +3,35 @@ class Dessert:
         self._name = name
         self._calories = calories
 
-    def get_name(self):
+    @property
+    def name(self):
         return self._name
 
-    def set_name(self, name):
+    @name.setter
+    def name(self, name):
         self._name = name
 
-    def get_calories(self):
+    @property
+    def calories(self):
         return self._calories
 
-    def set_calories(self, calories):
-        self._calories = calories
+    @calories.setter
+    def calories(self, calories):
+        if isinstance(calories, (int, float)):
+            self._calories = calories
+        elif isinstance(self, str):
+            if calories.isdigit():
+                self._calories = calories
+            else:
+                raise ValueError("Строка содержит символы, помимо чисел")
+        else:
+             raise ValueError("Неверный формат вводимых данных")
 
     def is_healthy(self):
-        return self._calories < 200
+        if self._calories > 200:
+            return False
+        else:
+            return True
 
     def is_delicious(self):
         return True
